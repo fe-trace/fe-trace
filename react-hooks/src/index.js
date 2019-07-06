@@ -8,3 +8,5 @@ function App(props) {
 }
 
 render(<App />, document.querySelector("#app"));
+
+console.log("init");
