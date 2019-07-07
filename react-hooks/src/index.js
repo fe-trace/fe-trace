@@ -10,11 +10,13 @@ import UseCallback from './useCallback.js';
 import UseMemo from './useMemo.js';
 import UseRefLazy from './useRef_lazy.js';
 import CustomHook from './customHook.js';
+import ImperativeHook from './useImperativeHandle.js';
+import UseContext from './useContext.js';
 
 function App(props) {
     return (
         <div>
-            <UseState />
+            {/* <UseState /> */}
             {/* <UseStata_1 /> */}
             {/* <UseEffect /> */}
             {/* <UseRef /> */}
@@ -23,7 +25,9 @@ function App(props) {
             {/* <UseCallback /> */}
             {/* <UseMemo /> */}
             {/* <UseRefLazy /> */}
-            <CustomHook />
+            {/* <CustomHook /> */}
+            {/* <ImperativeHook /> */}
+            <UseContext />
         </div>
     );
 }
