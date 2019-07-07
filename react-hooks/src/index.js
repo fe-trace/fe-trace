@@ -9,11 +9,12 @@ import UseReducer from './useReduce.js';
 import UseCallback from './useCallback.js';
 import UseMemo from './useMemo.js';
 import UseRefLazy from './useRef_lazy.js';
+import CustomHook from './customHook.js';
 
 function App(props) {
     return (
         <div>
-            {/* <UseState /> */}
+            <UseState />
             {/* <UseStata_1 /> */}
             {/* <UseEffect /> */}
             {/* <UseRef /> */}
@@ -21,7 +22,8 @@ function App(props) {
             {/* <UseReducer /> */}
             {/* <UseCallback /> */}
             {/* <UseMemo /> */}
-            <UseRefLazy />
+            {/* <UseRefLazy /> */}
+            <CustomHook />
         </div>
     );
 }
