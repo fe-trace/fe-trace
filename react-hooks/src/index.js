@@ -12,6 +12,7 @@ import UseRefLazy from './useRef_lazy.js';
 import CustomHook from './customHook.js';
 import ImperativeHook from './useImperativeHandle.js';
 import UseContext from './useContext.js';
+import LifeCycle from './lifecycle.js';
 
 function App(props) {
     return (
@@ -27,7 +28,8 @@ function App(props) {
             {/* <UseRefLazy /> */}
             {/* <CustomHook /> */}
             {/* <ImperativeHook /> */}
-            <UseContext />
+            {/* <UseContext /> */}
+            <LifeCycle />
         </div>
     );
 }
