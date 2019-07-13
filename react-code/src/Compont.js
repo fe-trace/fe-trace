@@ -3,7 +3,7 @@ import React from 'react';
 const { useState } = React;
 class ClassComponent extends React.Component {
     constructor(props, context) {
-        console.log("data: ", props, context, rest);
+        console.log("data: ", props, context);
         super(props);
         this.state = {
             count: 0
@@ -76,4 +76,4 @@ export default function() {
  * 备注：
  * 1.类组件实例化时参数为：props和context
  * 2.setState方法调用时传递的参数为：state和props
- **/ 
+ **/
