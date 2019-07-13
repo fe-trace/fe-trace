@@ -2,7 +2,8 @@ import React from 'react';
 
 const { useState } = React;
 class ClassComponent extends React.Component {
-    constructor(props) {
+    constructor(props, context) {
+        console.log("data: ", props, context, rest);
         super(props);
         this.state = {
             count: 0
@@ -10,9 +11,12 @@ class ClassComponent extends React.Component {
     }
     
     handleClick = () => {
-        this.setState((state) => ({
-            count: state.count + 1
-        }));
+        this.setState((state, props) => {
+            console.log('props: ', props);
+            return {
+                count: state.count + 1
+            };
+        });
     }
 
     handleDelay = () => {
@@ -27,7 +31,7 @@ class ClassComponent extends React.Component {
                 <div>class componnet</div>
                 <span>{ this.state.count }</span>
                 <div>
-                    <span className="btn" onClick={ this.handleClick }>add count</span>
+                    <span id="btn" className="btn" onClick={ this.handleClick }>add count</span>
                     <span className="btn" onClick={ this.handleDelay }>console delay</span>
                 </div>
             </div>
@@ -58,8 +62,8 @@ function FunctionComponent() {
 export default function() {
     return (
         <React.Fragment>
-            <ClassComponent />
-            <FunctionComponent />
+            <ClassComponent name='comp' />
+            {/* <FunctionComponent /> */}
         </React.Fragment>
     );
 }
@@ -68,4 +72,8 @@ export default function() {
  * React的设计理念是：数据始终是不变的(immutable)，每次setState都会返回全新的State。
  * 函数组件中访问state返回的是当次渲染时的保存数据，说明函数组件拥有Hooks的capture value特性。
  * 但是上例在定时器中访问State的值确是可变的，根本原因是this.state的指向改变了，不是State改变了。
+ * 
+ * 备注：
+ * 1.类组件实例化时参数为：props和context
+ * 2.setState方法调用时传递的参数为：state和props
  **/ 

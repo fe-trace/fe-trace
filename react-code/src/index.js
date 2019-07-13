@@ -6,8 +6,8 @@ import Hook from './Hooks.js';
 function App(props) {
     return (
         <React.Fragment>
-            {/* <ComponentCompare /> */}
-            <Hook />
+            <ComponentCompare />
+            {/* <Hook /> */}
         </React.Fragment>
     );
 }
