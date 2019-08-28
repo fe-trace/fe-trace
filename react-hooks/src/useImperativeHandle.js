@@ -1,18 +1,21 @@
 import React from 'react';
 import Panel from './panel.js';
 
-const { useRef, useEffect, useImperativeHandle, forwardRef } = React;
+const { useRef, useState, useImperativeHandle, forwardRef } = React;
 
 function Child(props, ref) {
-    const inputRef = useRef();
+    // const inputRef = useRef();
+    const [ count, set ] = useState(0);
 
     useImperativeHandle(ref, () => ({
         setValue: (val) => {
-            inputRef.current.value = val;
+            set(val);
         }
     }));
     return (
-        <input ref={inputRef} />
+        <div>
+            <span>{count}</span>
+        </div>
     );
 }
 

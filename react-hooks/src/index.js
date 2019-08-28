@@ -27,9 +27,9 @@ function App(props) {
             {/* <UseMemo /> */}
             {/* <UseRefLazy /> */}
             {/* <CustomHook /> */}
-            {/* <ImperativeHook /> */}
+            <ImperativeHook />
             {/* <UseContext /> */}
-            <LifeCycle />
+            {/* <LifeCycle /> */}
         </div>
     );
 }

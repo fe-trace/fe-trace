@@ -16,5 +16,6 @@
     "url": "https://github.com/jenergy/fe-trace/issues"
   },
   "homepage": "https://github.com/jenergy/fe-trace#readme",
-  "devDependencies": {}
+  "devDependencies": {},
+  "dependencies": {}
 }
